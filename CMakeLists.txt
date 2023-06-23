@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.13)
 # Set the Pico SDK path (update it with your own path)
 set(PICO_SDK_PATH ~/code/pico/pico-sdk)
 
+# Set Pico board
+set(PICO_BOARD pico_w)
+
 # Include the Pico SDK
 include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
 
