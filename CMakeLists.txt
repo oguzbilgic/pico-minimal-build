@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.13)
 
 # Set the Pico SDK path (update it with your own path)
-set(PICO_SDK_PATH ~/code/pico/pico-sdk)
+set(PICO_SDK_PATH ${CMAKE_CURRENT_LIST_DIR}/lib/pico-sdk)
 
-# Set Pico board
+# Set the Pico board
 set(PICO_BOARD pico_w)
 
-# Include the Pico SDK
+# Include the Pico SDK. Must be before project()
 include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
 
 # Set the project name
@@ -19,7 +19,7 @@ set(CMAKE_CXX_STANDARD 17)
 # Initialize the Pico SDK
 pico_sdk_init()
 
-# Add your source files here
+# Add the project source files
 add_executable(pico_project
     main.c
     # additional source files
@@ -34,5 +34,8 @@ target_link_libraries(pico_project
 # Enable UART output (optional)
 # pico_enable_stdio_uart(pico_project 1)
 
-# Create a UF2 output file for the project
+# Enable USB output (optional)
+# pico_enable_stdio_usb(pico_project 1)
+
+# Create map/bin/hex/uf2 files
 pico_add_extra_outputs(pico_project)
