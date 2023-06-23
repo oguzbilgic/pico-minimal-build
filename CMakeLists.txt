@@ -21,7 +21,7 @@ pico_sdk_init()
 
 # Add the project source files
 add_executable(pico_project
-    main.c
+    src/main.c
     # additional source files
 )
 
