@@ -11,6 +11,7 @@ This is a minimal build template for a Raspberry Pi Pico project using the Pico 
 
 1. Update the `PICO_SDK_PATH` in the `CMakeLists.txt` file with your own Pico SDK path.
 2. Set the `PICO_BOARD` in the `CMakeLists.txt` file to your specific Pico board model.
+3. Set the `PROJECT_NAME` in the `CMakeLists.txt` file with your project name.
 
 ## Build
 
@@ -30,9 +31,7 @@ This will generate the necessary executable and other output files for your proj
 After building the project, you can flash the generated binary to your Pi Pico using picotool. Here are the steps:
 
 1. Install picotool by following the instructions on the [picotool GitHub page](https://github.com/raspberrypi/picotool).
-
 2. Connect your Pi Pico to your computer. Hold the BOOTSEL button while connecting to enable the UF2 bootloader mode.
-
 3. Use the following command to upload the binary to your Pi Pico:
 
 ```bash
