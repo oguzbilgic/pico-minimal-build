@@ -25,6 +25,21 @@ make
 
 This will generate the necessary executable and other output files for your project.
 
+## Flashing the Build to Pi Pico
+
+After building the project, you can flash the generated binary to your Pi Pico using picotool. Here are the steps:
+
+1. Install picotool by following the instructions on the [picotool GitHub page](https://github.com/raspberrypi/picotool).
+
+2. Connect your Pi Pico to your computer. Hold the BOOTSEL button while connecting to enable the UF2 bootloader mode.
+
+3. Use the following command to upload the binary to your Pi Pico:
+
+```bash
+cd build
+picotool load <your_project_name>.uf2
+```
+
 ## Usage
 
 The main entry point of the project is `src/main.c`. Add your source files to the `add_executable` function in the `CMakeLists.txt` file and link any additional Pico SDK libraries to the `target_link_libraries` function.
