@@ -25,13 +25,11 @@ pico_sdk_init()
 # Add the project source files
 add_executable(${PROJECT_NAME}
     src/main.c
-    # additional source files
 )
 
 # Link the Pico SDK libraries
 target_link_libraries(${PROJECT_NAME}
     pico_stdlib
-    # additional Pico SDK libraries
 )
 
 # Enable UART output (optional)
